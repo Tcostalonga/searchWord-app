@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">SearchWordApp</string>
+
+
+    // list_item.xml
+    <string name="definition_ex">a visible mass of condensed watery vapour floating in the atmosphere, typically high above the general level of the ground.</string>
+    <string name="example_ex">\"the sun had disappeared behind a cloud\"</string>
+    <string name="type_ex">noun</string>
+
+
+    // activity_main.xml
+    <string name="buscar_palavra">Buscar palavra em inglês</string>
+    <string name="botao_pesquisa">Botão de pesquisa</string>
+    <string name="word">Cloud</string>
+    <string name="pronunciation">/kloud/</string>
+
+    <string name="stringK">"%s"</string>
+
+
 </resources>
