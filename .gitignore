@@ -1,5 +1,22 @@
-# Created by https://www.gitignore.io/api/java,linux,gradle,kotlin,windows,androidstudio
-# Edit at https://www.gitignore.io/?templates=java,linux,gradle,kotlin,windows,androidstudio
+# Created by https://www.gitignore.io/api/java,linux,gradle,kotlin,windows,androidstudio,sonar,sonarqube
+# Edit at https://www.gitignore.io/?templates=java,linux,gradle,kotlin,windows,androidstudio,sonar,sonarqube
+
+
+### Sonar ###
+#Sonar generated dir
+/.sonar/
+
+### SonarQube ###
+# SonarQube ignore files.
+#
+# https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner
+# Sonar Scanner working directories
+.sonar/
+.scannerwork/
+
+# http://www.sonarlint.org/commandline/
+# SonarLint working directories, configuration files (including credentials)
+.sonarlint/
 
 ### Java ###
 # Compiled class file
@@ -218,5 +235,5 @@ fabric.properties
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-# End of https://www.gitignore.io/api/java,linux,gradle,kotlin,windows,androidstudio
+# End of https://www.gitignore.io/api/java,linux,gradle,kotlin,windows,androidstudio,sonar,sonarqube
 
