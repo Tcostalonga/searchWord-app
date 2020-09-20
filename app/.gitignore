@@ -4,7 +4,7 @@
 
 ### Sonar ###
 #Sonar generated dir
-/.sonar/
+/.sonarlint/
 
 ### SonarQube ###
 # SonarQube ignore files.

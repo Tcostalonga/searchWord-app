@@ -1,14 +1,15 @@
 package tarsila.costalonga.searchwordapp.ui
 
 import android.os.Bundle
-import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
+import dagger.hilt.android.AndroidEntryPoint
 import tarsila.costalonga.searchwordapp.R
 import tarsila.costalonga.searchwordapp.databinding.ActivityMainBinding
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -24,7 +25,20 @@ class MainActivity : AppCompatActivity() {
 
         binding.viewModel = viewModel
 
-   //     binding.cardView.visibility = View.INVISIBLE
+
+        binding.searchButton.setOnClickListener {
+
+            viewModel.requestNetwork()
+
+        }
+
+        viewModel.msg.observe(this, Observer {
+            binding.word.text = it
+
+        })
+
+
+        //     binding.cardView.visibility = View.INVISIBLE
 
         //     word.text = viewModel.k.value
 //search_txt.hint = viewModel.k.value
