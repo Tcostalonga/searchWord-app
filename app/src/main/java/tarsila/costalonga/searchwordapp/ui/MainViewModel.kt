@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import tarsila.costalonga.searchwordapp.network.Definitions
 import tarsila.costalonga.searchwordapp.utils.Resource
 import tarsila.costalonga.searchwordapp.network.WordAPI
 import tarsila.costalonga.searchwordapp.network.WordClass
@@ -28,18 +29,24 @@ class MainViewModel @ViewModelInject constructor(val api: WordAPI) : ViewModel()
     val msg: LiveData<String>
         get() = _msg
 
+    private val _status = MutableLiveData<Status>()
+    val status: LiveData<Status>
+        get() = _status
 
     suspend fun suspendRequest(): Resource<WordClass> {
 
         return try {
-            val retornoAPI = api.getWord("tarsia")
-            retornoAPI.code()
+            val retornoAPI = api.getWord("boy")
             if (retornoAPI.isSuccessful) {
-                Resource.success(retornoAPI.body())
+
+                retornoAPI.body()?.let {
+                    _word.value = retornoAPI.body()
+                 return@let Resource.success(retornoAPI.body())
+                } ?:
+                Resource.error("Corpo do retorno vazio", null)
             } else {
                 Resource.error("Palavra não encontrada", null)
             }
-
         } catch (e: Exception) {
             Resource.error("Verifique sua conexão", null)
         }

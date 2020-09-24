@@ -17,6 +17,15 @@
         android:layout_margin="@dimen/medium_margin"
         tools:context=".ui.MainActivity">
 
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="ERRO NA TELA" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/search_txt"
@@ -49,6 +58,7 @@
             app:layout_constraintTop_toTopOf="@id/search_txt" />
 
         <com.google.android.material.card.MaterialCardView
+            android:visibility="gone"
             android:id="@+id/card_view"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -78,7 +88,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/medium_margin"
-                    android:text="@string/pronunciation"
                     tools:text="@string/pronunciation" />
 
 
@@ -91,6 +100,8 @@
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

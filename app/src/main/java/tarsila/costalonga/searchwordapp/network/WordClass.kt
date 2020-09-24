@@ -16,8 +16,8 @@ data class WordClass(
 data class Definitions(
     val type: String,
     val definition: String,
-    val example: String?,
-    @SerializedName("image_url") val imageURL: String?,
+    val example: String = "",
+    @SerializedName("image_url") val imageURL: String = "",
 ) : Parcelable {
 
 }

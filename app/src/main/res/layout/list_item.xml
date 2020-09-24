@@ -10,10 +10,6 @@
             type="tarsila.costalonga.searchwordapp.network.WordClass" />
     </data>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -38,6 +34,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/view"
                 style="@style/ListItemParams"
+                android:textStyle="italic"
                 tools:text="@string/type_ex" />
 
             <TextView
@@ -55,6 +52,7 @@
                 style="@style/ListItemParams"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorGrey"
                 app:layout_constraintEnd_toStartOf="@id/foto_img"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/definition_txv"
@@ -69,9 +67,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/view"
                 app:layout_constraintWidth_percent="0.2"
-                tools:src="@drawable/cloud_img" />
+                tools:src="@drawable/cloud_img"
+               />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
 </layout>

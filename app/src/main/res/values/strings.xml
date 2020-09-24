@@ -16,5 +16,7 @@
 
     <string name="stringK">"%s"</string>
 
+    <string name="stringPronunciation">"/%s/"</string>
+
 
 </resources>

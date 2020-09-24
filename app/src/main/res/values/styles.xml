@@ -10,7 +10,9 @@
 
     <style name="ListItemParams" parent="Widget.MaterialComponents.TextView">
         <item name="android:layout_marginEnd">@dimen/small_margin</item>
+        <item name="android:justificationMode">inter_word</item>
 
     </style>
+
 
 </resources>
