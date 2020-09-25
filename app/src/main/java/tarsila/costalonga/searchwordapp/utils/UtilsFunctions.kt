@@ -5,6 +5,11 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 
+const val EMPTY_BODY_REQUEST = "Não há informação para a palavra pesquisada"
+const val NOT_FOUND_REQUEST = "Palavra não encontrada"
+const val NOT_CONNECTED_REQUEST = "Verifique sua conexão"
+
+
 fun makeToast(context: Context, msg: String): Unit {
     Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
 }

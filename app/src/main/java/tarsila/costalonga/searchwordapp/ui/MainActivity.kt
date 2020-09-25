@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import tarsila.costalonga.searchwordapp.R
 import tarsila.costalonga.searchwordapp.databinding.ActivityMainBinding
+import tarsila.costalonga.searchwordapp.utils.EMPTY_BODY_REQUEST
+import tarsila.costalonga.searchwordapp.utils.NOT_CONNECTED_REQUEST
+import tarsila.costalonga.searchwordapp.utils.NOT_FOUND_REQUEST
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -28,10 +31,9 @@ class MainActivity : AppCompatActivity() {
         binding.viewModel = viewModel
 
         binding.searchButton.setOnClickListener {
-
-            viewModel.requestNetwork()
+            val k = binding.textInput.text.toString()
+            viewModel.requestNetwork(k)
             binding.cardView.visibility = View.INVISIBLE
-
         }
 
         //Setando dados na tela após retorno da requisição
@@ -48,6 +50,14 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.msg.observe(this, Observer {
             binding.error.text = it
+
+            when (it) {
+                EMPTY_BODY_REQUEST -> binding.imgError.setImageResource(R.drawable.b_shadow)
+                NOT_FOUND_REQUEST -> binding.imgError.setImageResource(R.drawable.b_shadow)
+                NOT_CONNECTED_REQUEST -> binding.imgError.setImageResource(R.drawable.wifi_off)
+            }
+
+
         })
     }
 
