@@ -1,5 +1,6 @@
 package tarsila.costalonga.searchwordapp.ui
 
+import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,10 +12,12 @@ import kotlinx.android.synthetic.main.list_item.view.*
 import tarsila.costalonga.searchwordapp.R
 import tarsila.costalonga.searchwordapp.network.Definitions
 import tarsila.costalonga.searchwordapp.network.WordClass
+import tarsila.costalonga.searchwordapp.utils.formatExample
+import kotlin.coroutines.coroutineContext
 
 class WordAdapter : RecyclerView.Adapter<WordAdapter.WordsViewHolder>() {
 
-     var data  = listOf<Definitions>()
+    var data = listOf<Definitions>()
 
 
     class WordsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -22,7 +25,7 @@ class WordAdapter : RecyclerView.Adapter<WordAdapter.WordsViewHolder>() {
         fun bind(item: Definitions) {
             itemView.type_txv.text = item.type
             itemView.definition_txv.text = item.definition
-            itemView.example_txv.text = item.example
+            itemView.example_txv.text = formatExample(item.example)
 
             if (item.imageURL.isNullOrEmpty()) {
                 itemView.foto_img.visibility = View.GONE

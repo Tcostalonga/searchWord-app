@@ -6,6 +6,8 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="viewModel"
             type="tarsila.costalonga.searchwordapp.ui.MainViewModel" />
@@ -19,7 +21,7 @@
         tools:context=".ui.MainActivity">
 
         <TextView
-            android:id="@+id/error"
+            android:id="@+id/txt_error"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -32,12 +34,12 @@
             android:id="@+id/img_error"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:src="@drawable/search_24"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/error"
-            app:layout_constraintStart_toStartOf="@id/error"
-            app:layout_constraintTop_toBottomOf="@id/error"
-            app:layout_constraintVertical_bias="0.15" />
+            app:layout_constraintEnd_toEndOf="@id/txt_error"
+            app:layout_constraintStart_toStartOf="@id/txt_error"
+            app:layout_constraintTop_toBottomOf="@id/txt_error"
+            app:layout_constraintVertical_bias="0.15"
+            tools:src="@drawable/search_24" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/search_txt"
@@ -53,10 +55,10 @@
                 android:id="@+id/text_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:digits="@string/alfabeto"
+                android:inputType="textCapSentences"
                 android:maxLength="20"
-                android:singleLine="true"
-                android:inputType="text"
-                />
+                android:singleLine="true" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -99,13 +101,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="@string/word" />
-
-                <TextView
-                    android:id="@+id/pronunciation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/medium_margin"
-                    tools:text="@string/pronunciation" />
 
 
                 <androidx.recyclerview.widget.RecyclerView

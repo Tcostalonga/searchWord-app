@@ -16,7 +16,8 @@
 
     <string name="stringK">"%s"</string>
 
-    <string name="stringPronunciation">"/%s/"</string>
+    <string name="stringExample">"%s"</string>
+    <string name="alfabeto">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
 
 
 </resources>
