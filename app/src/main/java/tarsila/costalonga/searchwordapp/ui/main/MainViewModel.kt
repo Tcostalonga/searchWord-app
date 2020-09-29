@@ -1,4 +1,4 @@
-package tarsila.costalonga.searchwordapp.ui
+package tarsila.costalonga.searchwordapp.ui.main
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData

@@ -1,19 +1,15 @@
-package tarsila.costalonga.searchwordapp.ui
+package tarsila.costalonga.searchwordapp.ui.main
 
-import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import jp.wasabeef.picasso.transformations.CropCircleTransformation
-import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.list_item.view.*
 import tarsila.costalonga.searchwordapp.R
 import tarsila.costalonga.searchwordapp.network.Definitions
-import tarsila.costalonga.searchwordapp.network.WordClass
 import tarsila.costalonga.searchwordapp.utils.formatExample
-import kotlin.coroutines.coroutineContext
 
 class WordAdapter : RecyclerView.Adapter<WordAdapter.WordsViewHolder>() {
 
@@ -39,15 +35,15 @@ class WordAdapter : RecyclerView.Adapter<WordAdapter.WordsViewHolder>() {
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordAdapter.WordsViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordsViewHolder {
 
         val item =
             LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
-        return WordAdapter.WordsViewHolder(item)
+        return WordsViewHolder(item)
 
     }
 
-    override fun onBindViewHolder(holder: WordAdapter.WordsViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: WordsViewHolder, position: Int) {
         val item = data.get(position)
         holder.bind(item)
     }

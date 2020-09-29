@@ -10,7 +10,7 @@
 
         <variable
             name="viewModel"
-            type="tarsila.costalonga.searchwordapp.ui.MainViewModel" />
+            type="tarsila.costalonga.searchwordapp.ui.main.MainViewModel" />
 
     </data>
 
@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/medium_margin"
-        tools:context=".ui.MainActivity">
+        tools:context=".ui.main.MainActivity">
 
         <TextView
             android:id="@+id/txt_error"

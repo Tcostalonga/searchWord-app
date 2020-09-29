@@ -1,19 +1,21 @@
-package tarsila.costalonga.searchwordapp.ui
+package tarsila.costalonga.searchwordapp.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.widget.addTextChangedListener
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.list_item.*
 import tarsila.costalonga.searchwordapp.R
 import tarsila.costalonga.searchwordapp.databinding.ActivityMainBinding
+import tarsila.costalonga.searchwordapp.ui.about.InfoActivity
 import tarsila.costalonga.searchwordapp.utils.*
 
 @AndroidEntryPoint
@@ -84,6 +86,23 @@ class MainActivity : AppCompatActivity() {
                 NOT_CONNECTED_REQUEST -> binding.imgError.setImageResource(R.drawable.wifi_off)
             }
         })
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.opt_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val intent = Intent(this, InfoActivity::class.java)
+
+        if (item.itemId == R.id.about) {
+            startActivity(intent)
+        }
+
+        return super.onOptionsItemSelected(item)
+
     }
 
     fun setarRecyclerView() {
