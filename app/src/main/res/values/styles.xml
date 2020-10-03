@@ -5,14 +5,18 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSecondary">@color/colorAccent</item>
+
     </style>
 
 
     <style name="ListItemParams" parent="Widget.MaterialComponents.TextView">
         <item name="android:layout_marginEnd">@dimen/medium_margin</item>
-        <item name="android:justificationMode">inter_word</item>
 
     </style>
+
+
+
 
 
 </resources>

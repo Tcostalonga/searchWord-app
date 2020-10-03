@@ -35,8 +35,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.viewModel = viewModel
 
-        binding.searchButton.isEnabled = false
-
         binding.textInput.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 //Esconde o texto e img de erro
@@ -45,8 +43,9 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                //Botao só é habilitado com mais de 1 caracter escrito
-                binding.searchButton.isEnabled = p1 > 0
+                //Botao só é habilitado se + de 1 caracter tiver sido escrito
+
+                binding.searchButton.isEnabled = p3 > 1
             }
 
             override fun afterTextChanged(p0: Editable?) {
@@ -81,8 +80,8 @@ class MainActivity : AppCompatActivity() {
             binding.txtError.text = it
 
             when (it) {
-                EMPTY_BODY_REQUEST -> binding.imgError.setImageResource(R.drawable.b_shadow)
-                NOT_FOUND_REQUEST -> binding.imgError.setImageResource(R.drawable.b_shadow)
+                EMPTY_BODY_REQUEST -> binding.imgError.setImageResource(R.drawable.help_outline_24)
+                NOT_FOUND_REQUEST -> binding.imgError.setImageResource(R.drawable.help_outline_24)
                 NOT_CONNECTED_REQUEST -> binding.imgError.setImageResource(R.drawable.wifi_off)
             }
         })

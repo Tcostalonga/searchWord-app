@@ -27,7 +27,6 @@
             android:id="@+id/txt_sobre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:justificationMode="inter_word"
             android:contentDescription="@string/disclaimer"
             android:text="@string/disclaimer" />
     </ScrollView>

@@ -17,5 +17,8 @@ class InfoActivity : AppCompatActivity() {
 
         //Setando titulos para as abas
           tab_layout.setupWithViewPager(view_pager)
+
+        //Seta up
+        actionBar?.setDisplayHomeAsUpEnabled(true)
     }
 }

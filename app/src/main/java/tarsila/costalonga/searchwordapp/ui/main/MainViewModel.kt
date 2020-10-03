@@ -16,12 +16,12 @@ class MainViewModel @ViewModelInject constructor(val api: WordAPI) : ViewModel()
     private val scope = CoroutineScope(Dispatchers.Main)
 
     private val _word = MutableLiveData<WordClass>()
-    val word: LiveData<WordClass>
-        get() = _word
+    val word: LiveData<WordClass> = _word
 
     private val _msg = MutableLiveData<String>()
     val msg: LiveData<String>
         get() = _msg
+
 
     private val _status = MutableLiveData<Status>()
     val status: LiveData<Status>
