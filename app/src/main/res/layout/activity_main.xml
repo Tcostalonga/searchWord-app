@@ -17,8 +17,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:focusableInTouchMode="true"
         android:layout_margin="@dimen/medium_margin"
+        android:focusableInTouchMode="true"
         tools:context=".ui.main.MainActivity">
 
         <TextView
@@ -40,13 +40,14 @@
             app:layout_constraintStart_toStartOf="@id/txt_error"
             app:layout_constraintTop_toBottomOf="@id/txt_error"
             app:layout_constraintVertical_bias="0.15"
-            tools:src="@drawable/search_24" />
+            tools:src="@drawable/ic_lupa_quebrada" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/search_txt"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/colorBorder"
             app:layout_constraintEnd_toStartOf="@id/search_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -58,24 +59,25 @@
                 android:digits="@string/alfabeto"
                 android:hint="@string/buscar_palavra"
                 android:inputType="textCapSentences"
-
                 android:maxLength="20"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/search_button"
-             android:layout_width="wrap_content"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/small_margin"
             android:enabled="false"
+            app:tint="@color/colorOptMenuIcon"
             app:layout_constraintBottom_toBottomOf="@id/search_txt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/search_txt"
             app:layout_constraintTop_toTopOf="@id/search_txt"
-            app:srcCompat="@drawable/search_24" />
+            app:srcCompat="@drawable/ic_search_24" />
 
 
         <com.google.android.material.card.MaterialCardView
@@ -89,7 +91,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/search_txt"
-            app:strokeColor="@color/colorGrey"
+            app:strokeColor="@color/colorBorder"
             app:strokeWidth="0.9dp">
 
             <LinearLayout

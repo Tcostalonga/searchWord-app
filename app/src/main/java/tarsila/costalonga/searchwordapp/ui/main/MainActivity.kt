@@ -80,9 +80,9 @@ class MainActivity : AppCompatActivity() {
             binding.txtError.text = it
 
             when (it) {
-                EMPTY_BODY_REQUEST -> binding.imgError.setImageResource(R.drawable.help_outline_24)
-                NOT_FOUND_REQUEST -> binding.imgError.setImageResource(R.drawable.help_outline_24)
-                NOT_CONNECTED_REQUEST -> binding.imgError.setImageResource(R.drawable.wifi_off)
+                EMPTY_BODY_REQUEST -> binding.imgError.setImageResource(R.drawable.ic_lupa_quebrada)
+                NOT_FOUND_REQUEST -> binding.imgError.setImageResource(R.drawable.ic_lupa_quebrada)
+                NOT_CONNECTED_REQUEST -> binding.imgError.setImageResource(R.drawable.ic_wifi_off)
             }
         })
     }
