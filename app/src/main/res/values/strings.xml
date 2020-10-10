@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SearchWordApp</string>
+    <string name="app_name">Signific</string>
 
     // list_item.xml
     <string name="definition_ex">a visible mass of condensed watery vapour floating in the atmosphere, typically high above the general level of the ground.</string>

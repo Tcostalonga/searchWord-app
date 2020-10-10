@@ -13,6 +13,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.activity_main.*
 import tarsila.costalonga.searchwordapp.R
 import tarsila.costalonga.searchwordapp.databinding.ActivityMainBinding
 import tarsila.costalonga.searchwordapp.ui.about.InfoActivity
@@ -33,7 +34,9 @@ class MainActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        binding.viewModel = viewModel
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
 
         binding.textInput.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -55,6 +58,8 @@ class MainActivity : AppCompatActivity() {
         binding.searchButton.setOnClickListener {
 
             it.hideKeyboard()
+            //Mostra a progress bar
+            binding.pgBar.visibility = View.VISIBLE
             val k = binding.textInput.text.toString()
             viewModel.requestNetwork(k)
             binding.cardView.visibility = View.INVISIBLE
@@ -68,10 +73,13 @@ class MainActivity : AppCompatActivity() {
             adapter.notifyDataSetChanged()
 
             binding.word.text = it.word
+            binding.pgBar.visibility = View.GONE
             binding.cardView.visibility = View.VISIBLE
         })
 
         viewModel.msg.observe(this, Observer {
+           //Esconde a progress bar
+            binding.pgBar.visibility = View.GONE
 
             //Mostra o texto e img de erro
             binding.txtError.visibility = View.VISIBLE

@@ -31,6 +31,7 @@ class MainViewModel @ViewModelInject constructor(val api: WordAPI) : ViewModel()
 
         return try {
             val retornoAPI = api.getWord(param)
+
             if (retornoAPI.isSuccessful) {
                 retornoAPI.body()?.let {
                     _word.value = retornoAPI.body()
