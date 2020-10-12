@@ -22,11 +22,6 @@ class MainViewModel @ViewModelInject constructor(val api: WordAPI) : ViewModel()
     val msg: LiveData<String>
         get() = _msg
 
-
-    private val _status = MutableLiveData<Status>()
-    val status: LiveData<Status>
-        get() = _status
-
     suspend fun suspendRequest(param: String): Resource<WordClass> {
 
         return try {

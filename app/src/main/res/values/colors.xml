@@ -4,10 +4,8 @@
     <color name="colorPrimaryDark">#D5DBE7</color>
     <color name="colorAccent">#5D86B4</color>
 
-
     //opt_menu.xml
     <color name="colorOptMenuIcon">#F5F5F5</color>
-
 
     //list_item.xml
     <color name="colorGrey">#BFBFBF</color>

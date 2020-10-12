@@ -1,4 +1,4 @@
-# searchWordApp
+# SIGNIFIC
  
  
 ## Introdução
@@ -18,9 +18,12 @@ Para executar o código:
 
 ## Imagens
 
+<img src="https://github.com/Tcostalonga/searchWord-app/blob/dev/screenshots/1.png" alt="app light 1" width="288" height= "512"/>       <img src="https://github.com/Tcostalonga/searchWord-app/blob/dev/screenshots/2.png" alt="app light 3" width="288" height= "512"/>       <img src="https://github.com/Tcostalonga/searchWord-app/blob/dev/screenshots/3.png" alt="app light 2" width="288" height= "512"/> 
+
 
  
-
+ <img src="https://github.com/Tcostalonga/searchWord-app/blob/dev/screenshots/4.png" alt="app dark 1" width="288" height= "512"/>       <img src="https://github.com/Tcostalonga/searchWord-app/blob/dev/screenshots/5.png" alt="app dark 3" width="288" height= "512"/> 
+ 
 
 
  

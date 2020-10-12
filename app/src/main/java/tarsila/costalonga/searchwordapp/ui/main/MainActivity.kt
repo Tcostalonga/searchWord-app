@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var adapter: WordAdapter
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -109,14 +108,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         return super.onOptionsItemSelected(item)
-
     }
 
     fun setarRecyclerView() {
         adapter = WordAdapter()
         binding.recView.layoutManager = LinearLayoutManager(applicationContext)
         binding.recView.adapter = adapter
-
     }
-
 }
