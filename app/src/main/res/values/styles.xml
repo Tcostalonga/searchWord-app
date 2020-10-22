@@ -5,12 +5,18 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorSecondary">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorOptMenuIcon</item>
         <item name="android:fontFamily">@font/barlow_semi_condensed_regular</item>
         <item name="android:textSize">14sp</item>
         <item name="android:windowLightStatusBar">true</item>
         //*Define a up arrow da 2 activity na cor branca
         <item name="colorControlNormal">@color/colorOptMenuIcon</item>
     </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
 
     <style name="TextMeaning" parent="Widget.MaterialComponents.TextView">
         <item name="android:layout_marginEnd">@dimen/medium_margin</item>
